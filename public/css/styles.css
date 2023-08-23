@@ -1,0 +1,43 @@
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    letter-spacing: 5px;
+    background-color: #1abc9c;
+}
+
+
+.navbar-nav  li a:hover {
+    color: rgb(234, 219, 219) !important;
+}
+
+
+.button{
+    position: relative;
+    top: 3rem;
+    float: right;
+    background-color: #1abc9c;
+    border: none;
+    padding: 13px 32px;
+    border-radius: 10px;
+}
+
+.button:hover{
+    background-color: #24ebc3;
+}
+
+.button a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+
