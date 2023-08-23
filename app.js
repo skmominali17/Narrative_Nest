@@ -12,4 +12,4 @@ app.use(express.static("public"));
 app.use(cors());
 app.use("/", router);
 
-export default app; 
+export default app;
