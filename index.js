@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
-import mongoose from "mongoose";
-import app from "./app.js";
+import mongoose from 'mongoose';
+import app from './app.js';
+import { createServer } from 'http'; 
 
 dotenv.config();
 
@@ -9,6 +10,7 @@ const CONNECTION_URL = process.env.CONNECTION_URL;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
-        app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+        const server = createServer(app);
+        server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
     })
-    .catch(error => console.error("MongoDB connection error:", error.message));
+    .catch(error => console.error('MongoDB connection error:', error.message));
