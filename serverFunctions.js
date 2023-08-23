@@ -1,5 +1,5 @@
-import { renderFile } from 'ejs';
-import PostBlog from "./models/postBlog.js";
+import { renderFile } from "ejs"
+import PostBlog from './models/postBlog';
 
 const homeStartingContent = "Welcome to Narrative Nest, a haven for words and stories..."; // Your content here
 const aboutContent = "At Narrative Nest, we believe that every person is a storyteller..."; // Your content here

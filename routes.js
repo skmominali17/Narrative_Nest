@@ -1,5 +1,5 @@
 import express from "express";
-import { home, about, contact } from "./serverFunctions.js";
+import { home, contact, about } from "./serverFunctions.js";
 import PostBlog from "./models/postBlog.js";
 
 const router = express.Router();
