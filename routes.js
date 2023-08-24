@@ -1,5 +1,5 @@
 import express from "express";
-import { home, contact, about } from "./serverFunctions.js";
+import { home, contact, about, renderComposePage } from "./serverFunctions.js";
 import PostBlog from "./models/postBlog.js";
 
 const router = express.Router();
@@ -24,9 +24,7 @@ router.get("/about", about);
 
 router.get("/contact", contact);
 
-router.get("/compose", (req, res) => {
-  res.render("compose");
-});
+router.get('/compose', renderComposePage);
 
 router.post("/compose", async (req, res) => {
   const { title, content } = req.body;

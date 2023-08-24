@@ -1,4 +1,5 @@
 import { renderFile } from "ejs"
+import path from 'path';
 import PostBlog from './models/postBlog.js';
 
 const homeStartingContent = "Welcome to Narrative Nest, a haven for words and stories...";
@@ -43,5 +44,16 @@ export const contact = async (req, res) => {
   } catch (error) {
     console.error(error.message);
     res.status(500).send("Internal Server Error");
+  }
+};
+
+export const renderComposePage = async (req, res) => {
+  try {
+      const templatePath = path.join(__dirname, 'views', 'compose.ejs');
+      const html = await renderFile(templatePath);
+      res.status(200).send(html);
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
   }
 };
