@@ -49,7 +49,7 @@ export const contact = async (req, res) => {
 
 export const renderComposePage = async (req, res) => {
   try {
-      const html = await renderFile('views/contact.ejs', data);
+      const html = await renderFile('views/compose.ejs');
       res.status(200).send(html);
   } catch (error) {
       console.error(error.message);
