@@ -1,10 +1,6 @@
 import dotenv from 'dotenv';
 import mongoose from "mongoose";
-import express from "express";
-import bodyParser from "body-parser";
-import cors from "cors";
-import ejs from "ejs";
-import router from "./routes.js";
+import app from './app.js';
 
 dotenv.config();
 
@@ -16,10 +12,3 @@ mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: tr
         app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
     })
     .catch(error => console.error("MongoDB connection error:", error.message));
-
-const app = express();
-app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
-app.set('view engine', 'ejs');
-app.use(express.static("public"));
-app.use(cors());
-app.use("/", router);

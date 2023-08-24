@@ -1,9 +1,9 @@
 import { renderFile } from "ejs"
 import PostBlog from './models/postBlog.js';
 
-const homeStartingContent = "Welcome to Narrative Nest, a haven for words and stories..."; // Your content here
-const aboutContent = "At Narrative Nest, we believe that every person is a storyteller..."; // Your content here
-const contactContent = "We're thrilled to connect with you at Narrative Nest. Our 'Contact'..."; // Your content here
+const homeStartingContent = "Welcome to Narrative Nest, a haven for words and stories...";
+const aboutContent = "At Narrative Nest, we believe that every person is a storyteller..."; 
+const contactContent = "We're thrilled to connect with you at Narrative Nest. Our 'Contact'...";
 
 export const home = async (req, res) => {
   try {
