@@ -49,8 +49,7 @@ export const contact = async (req, res) => {
 
 export const renderComposePage = async (req, res) => {
   try {
-      const templatePath = path.join(__dirname, 'views', 'compose.ejs');
-      const html = await renderFile(templatePath);
+      const html = await renderFile('views/contact.ejs', data);
       res.status(200).send(html);
   } catch (error) {
       console.error(error.message);
